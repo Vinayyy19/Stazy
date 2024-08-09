@@ -1,0 +1,49 @@
+<% layout('layouts/boilerplate') %>
+<body>
+    <form method="post" class="needs-validation" novalidate action="/edit/<%= listing._id %>?_method=PATCH" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="title" class="form-control" name="title" value="<%= listing.title %>" required>
+        <div class="invalid-feedback">
+          Please Give Valid Title!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" class="form-control" rows="3" required> <%=listing.description %> </textarea>
+        <div class="invalid-feedback">
+          Please Give Valid Description!
+        </div>
+      </div>
+      <div class="mb-3">
+         Original image <br><br>
+        <img src="<%=chngimg %>">
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Upload Image</label>
+        <input type="file" class="form-control" id="image" name="image">
+     </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="price" class="form-control" name="price" value="<%=listing.price %>" required>
+        <div class="invalid-feedback">
+          Please Enter Valid Price!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="location" class="form-control" name="location" value="<%=listing.location %>" required>
+        <div class="invalid-feedback">
+          Please Enter Valid Location Name!
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="country" class="form-control" name="country" value="<%=listing.country %>" required>
+        <div class="invalid-feedback">
+          Please Enter Valid Country Name !
+        </div>
+      </div>
+      <button class="middle">submit</button>
+    </form>
+</body>
