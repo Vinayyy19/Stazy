@@ -27,7 +27,6 @@ module.exports.newListingSave = async(req,res)=>{
     newData.image = {url,fileName}
     newData.geometry = response.body.features[0].geometry;
     let saveData = await newData.save();
-    console.log(saveData);
     req.flash("success","New Listing Added");
     res.redirect("/");
   }
