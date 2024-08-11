@@ -21,8 +21,7 @@ const LocalStrategy = require('passport-local');
 // database connection
 main().then(()=>{console.log("connected to database");})
 .catch(err => console.log(err));
-async function main() {
-  // await mongoose.connect('mongodb://127.0.0.1:27017/WonderLust');
+async function main() {
   await mongoose.connect(process.env.dburl);
 }
 
