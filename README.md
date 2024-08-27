@@ -4,7 +4,7 @@ Wonderlust is a full-stack web application designed to connect homeowners who wa
 The project follows the MVC (Model-View-Controller) design pattern.
 
 ## Screenshot
-[image](https://github.com/user-attachments/assets/564bba83-4855-43fb-9db4-11d3581bc64f)
+![image](https://github.com/user-attachments/assets/564bba83-4855-43fb-9db4-11d3581bc64f)
 
 
 ## Table of Contents
