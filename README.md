@@ -6,7 +6,7 @@ The project follows the MVC (Model-View-Controller) design pattern.
 ## Screenshot
 ![image](https://github.com/user-attachments/assets/564bba83-4855-43fb-9db4-11d3581bc64f)
 
-
+ <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Table of Contents
 
 - [Features](#features)
@@ -17,6 +17,8 @@ The project follows the MVC (Model-View-Controller) design pattern.
 - [🛠️ How to Set Up the Project Locally](#️-how-to-set-up-the-project-locally)
 - [📬 Contact](#-contact)
 
+ <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+ 
 ## Features
 
 - **User Authentication and Registration**: Secure login and registration system with Passport.
@@ -26,26 +28,30 @@ The project follows the MVC (Model-View-Controller) design pattern.
 - **Tax Display**: Shows Price and Taxes.
 - **Map Integration**: Integrated with maps to show property locations.
 - **And More**: Additional features to enhance user experience.
-
+ <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+ 
 ## Tech Stack
-
+ 
 - **Frontend**: CSS, Bootstrap/Tailwind
 - **Backend**: Node.js, Express.js,javaScript
 - **Database**: MongoDB
 - **Authentication**: NPM package Passport
 - **Deployment**: Render.com
-
+ <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+ 
 ## Usage
+ 
 Register or log in to your account.
 View different properties from different places.
 List your property by providing necessary details.
 
+ <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Live Demo
+ 
 Check out the live demo of the project: Wonderlust Live
 https://wonderlust-lpjk.onrender.com/
 
- <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
- 
+  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## 🤝 How to Contribute
 
 We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you can get involved:
