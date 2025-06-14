@@ -31,20 +31,23 @@
   </div>
 </div>
 </div>
-  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center">
     <%  for(listing of alllisting){ %>
       <a href="/show/listing/<%= listing._id %>" style="text-decoration: none;">
-       <div class="card" style="width: 20rem">
+       <div class="card mx-auto" style="max-width: 20rem;">
            <img class="img" src="<%=listing.image.url %>" class="card-img-top" style="height: 16rem" alt="listing Image"  >
            <div class="card-body">
              <h5 class="card-title"><%= listing.title %> </h5>
              <h5>Price</h5>
-<% if (listing.price != null) { %>
-    &#8377;<%= listing.price.toLocaleString("en-IN") %> / Night
-    <i class="GST">&nbsp; +18%GST</i>
-<% } else { %>
-    <span>Price not available</span>
-<% } %>
+                <% if (listing.price != null) { 
+                    const price = listing.price;
+                    const gstPrice = Math.round(price * 1.18);
+                %>
+                    <span class="basePrice">&#8377;<%= price.toLocaleString("en-IN") %> / Night <span class="light-opacity">(excl. GST)</span></span>
+                    <span class="gstPrice" style="display: none;">&#8377;<%= gstPrice.toLocaleString("en-IN") %> / Night (incl. 18% GST)</span>
+                <% } else { %>
+                    <span>Price not available</span>
+                <% } %>
             </div>
           </div>
   <% } %>

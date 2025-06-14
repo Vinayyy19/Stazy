@@ -21,7 +21,8 @@ const LocalStrategy = require('passport-local');
 // database connection
 main().then(()=>{console.log("connected to database");})
 .catch(err => console.log(err));
-async function main() {
+async function main() {
+
   await mongoose.connect(process.env.dburl);
 }
 
