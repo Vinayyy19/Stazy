@@ -132,13 +132,15 @@ We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you c
 6. **Create a `.env` File** 🗃️
    - In the root directory of the project, create a `.env` file and add the following variables:
      ```plaintext
-     MAP_TOKEN=your-mapbox-access-token
-     ATLAS_DB_TOKEN=your-mongodb-connection-uri # mongodb://127.0.0.1:27017/wonderLust for running mongodb server locally
-     SECRET=your-secret-key
-     CLOUD_NAME=your-cloudinary-cloud-name
-     CLOUD_API_KEY=your-cloudinary-api-key
-     CLOUD_API_SECRET=your-cloudinary-api-secret
-     PORT=3000 # Default port for the server
+     map_acess=your-mapbox-access-token
+     dburl=your-mongodb-connection-uri # mongodb://127.0.0.1:27017/wonderLust for running mongodb server locally
+     secret=your-secret-key
+     fileNameE=your-cloudinary-cloud-name
+     api_key=your-cloudinary-api-key
+     api_secret=your-cloudinary-api-secret
+     PORT=8080 # Default port for the server
+     NODE_ENV=production
+     demoUSer=user-who-will-be-onwer-of-all-demo-user(give objectId)
      ```
 
 7. **Install Dependencies** ⚙️
