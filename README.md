@@ -4,7 +4,7 @@ Stazy is a full-stack web application designed to connect homeowners who want to
 The project follows the MVC (Model-View-Controller) design pattern.
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/564bba83-4855-43fb-9db4-11d3581bc64f)
+![image](https://github.com/user-attachments/assets/e0cf5541-49e6-413d-88f4-e0d9cfdc245a)
 
  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Table of Contents
@@ -49,7 +49,7 @@ List your property by providing necessary details.
 ## Live Demo
  
 Check out the live demo of the project: Stazy Live
-https://Stazy-lpjk.onrender.com/
+https://wonderlust-lpjk.onrender.com/
 
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## 🤝 How to Contribute
