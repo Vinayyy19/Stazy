@@ -1,6 +1,6 @@
-# Wonderlust
+# Stazy
 
-Wonderlust is a full-stack web application designed to connect homeowners who want to rent out their properties with people seeking accommodations.
+Stazy is a full-stack web application designed to connect homeowners who want to rent out their properties with people seeking accommodations.
 The project follows the MVC (Model-View-Controller) design pattern.
 
 ## Screenshot
@@ -48,26 +48,26 @@ List your property by providing necessary details.
  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Live Demo
  
-Check out the live demo of the project: Wonderlust Live
-https://wonderlust-lpjk.onrender.com/
+Check out the live demo of the project: Stazy Live
+https://Stazy-lpjk.onrender.com/
 
   <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## 🤝 How to Contribute
 
-We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you can get involved:
+We welcome contributions to help improve **Stazy**! 🚀 Here’s how you can get involved:
 
 1. **Fork the Repository** 🍴
-   - Navigate to the [WonderLust GitHub page](https://github.com/Vinayyy19/WonderLust). 🌐
+   - Navigate to the [Stazy GitHub page](https://github.com/Vinayyy19/Stazy). 🌐
    - Click on the Fork button in the top-right corner of the page to create a copy of the repository in your GitHub account. ➕
 
 2. **Clone Your Forked Repository** 🔄
    - After forking, clone the repository to your local machine:
      ```bash
-     git clone https://github.com/your-username/WonderLust.git
+     git clone https://github.com/your-username/Stazy.git
      ```
    - Navigate to the project directory:
      ```bash
-     cd WonderLust
+     cd Stazy
      ```
 
 3. **Create a New Branch for Your Changes** 🌿
@@ -102,13 +102,13 @@ We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you c
 1. **Clone the Repository** 🔍
    - Clone the repository to your local machine:
      ```bash
-     git clone https://github.com/your-username/WonderLust.git
+     git clone https://github.com/your-username/Stazy.git
      ```
 
 2. **Navigate to the Project Directory** 📂
    - Change to the directory where the project is located:
      ```bash
-     cd WonderLust
+     cd Stazy
      ```
 
 3. **Set Up Your Mapbox Account** 🌐
@@ -133,7 +133,7 @@ We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you c
    - In the root directory of the project, create a `.env` file and add the following variables:
      ```plaintext
      map_acess=your-mapbox-access-token
-     dburl=your-mongodb-connection-uri # mongodb://127.0.0.1:27017/wonderLust for running mongodb server locally
+     dburl=your-mongodb-connection-uri # mongodb://127.0.0.1:27017/Stazy for running mongodb server locally
      secret=your-secret-key
      fileNameE=your-cloudinary-cloud-name
      api_key=your-cloudinary-api-key
@@ -176,10 +176,10 @@ We welcome contributions to help improve **WonderLust**! 🚀 Here’s how you c
 ## 🤝 Join Our Community of Contributors!
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/35934e5d-4bf8-4add-908c-3ce47c9b1536" height="200" width="300" alt="WonderLust Logo"/>
+  <img src="https://github.com/user-attachments/assets/35934e5d-4bf8-4add-908c-3ce47c9b1536" height="200" width="300" alt="Stazy Logo"/>
 </div>
 
-We're excited to have you on board! Whether you're a seasoned developer or just starting out, your skills and ideas can make a significant impact on **WonderLust**. Here’s how you can get involved:
+We're excited to have you on board! Whether you're a seasoned developer or just starting out, your skills and ideas can make a significant impact on **Stazy**. Here’s how you can get involved:
 
 - **Share Your Ideas** 💡: Have a feature in mind? Let us know!
 - **Fix Bugs** 🐛: Help us improve the project by identifying and fixing issues.
