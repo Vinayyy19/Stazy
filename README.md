@@ -3,8 +3,8 @@
 Stazy is a full-stack web application designed to connect homeowners who want to rent out their properties with people seeking accommodations.
 The project follows the MVC (Model-View-Controller) design pattern.
 
-## Screenshot
-![image](https://github.com/user-attachments/assets/e0cf5541-49e6-413d-88f4-e0d9cfdc245a)
+## Screenshot![image](https://github.com/user-attachments/assets/983e2509-f972-4775-87f3-7cc03354f97d)
+
 
  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
 ## Table of Contents
@@ -26,6 +26,7 @@ The project follows the MVC (Model-View-Controller) design pattern.
 - **User Reviews and Ratings**: Users can leave reviews and rate properties.
 - **Responsive Design**: The application is fully responsive, providing a seamless experience across all devices.
 - **Tax Display**: Shows Price and Taxes.
+- **AI ChatBot**: dedicated AI chatbot to help in hotel booking.
 - **Map Integration**: Integrated with maps to show property locations.
 - **And More**: Additional features to enhance user experience.
  <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
