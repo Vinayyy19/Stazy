@@ -1,0 +1,46 @@
+[
+    {
+        "questionKeywords": ["wifi", "internet", "connectivity"],
+        "answer": "Yes, we offer complimentary high-speed Wi-Fi throughout the hotel for all guests. The network name is 'StazyGuest' and there is no password required."
+    },
+    {
+        "questionKeywords": ["check-in", "check in time"],
+        "answer": "Standard check-in time is 3:00 PM. If you require an early check-in, please contact the front desk, and we will do our best to accommodate you based on availability."
+    },
+    {
+        "questionKeywords": ["check-out", "check out time"],
+        "answer": "Standard check-out time is 11:00 AM. Late check-out may be available for an additional fee, subject to availability. Please inquire at the front desk."
+    },
+    {
+        "questionKeywords": ["breakfast", "meal", "food"],
+        "answer": "Breakfast is served daily from 7:00 AM to 10:30 AM in our main dining area. We offer a complimentary buffet breakfast with a variety of options."
+    },
+    {
+        "questionKeywords": ["pool", "swimming"],
+        "answer": "Yes, our outdoor swimming pool is open daily from 8:00 AM to 8:00 PM. Pool towels are provided."
+    },
+    {
+        "questionKeywords": ["pets", "pet policy", "animals"],
+        "answer": "Unfortunately, we do not allow pets at Stazy Hotel, with the exception of service animals."
+    },
+    {
+        "questionKeywords": ["gym", "fitness", "workout"],
+        "answer": "Our fitness center is open 24/7 for all guests and features a range of cardio and weight training equipment."
+    },
+    {
+        "questionKeywords": ["address", "location", "find you"],
+        "answer": "Our address is [Your Hotel Address Here], Navi Mumbai, Maharashtra, India."
+    },
+    {
+        "questionKeywords": ["restaurant", "dining"],
+        "answer": "We have two restaurants: 'The Grand Feast' for all-day dining and 'Spice Route' for Indian cuisine. Room service is also available 24/7."
+    },
+    {
+        "questionKeywords": ["cancel", "cancellation policy"],
+        "answer": "Our standard cancellation policy allows free cancellation up to 24 hours before check-in. For specific booking terms, please refer to your booking confirmation or contact us directly."
+    },
+    {
+        "questionKeywords": ["contact", "phone number"],
+        "answer": "You can reach us at +91-9876543210 or email info@stazyhotel.com."
+    }
+]

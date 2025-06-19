@@ -30,7 +30,13 @@ const listingSchema = new schema ({
     owner:{
       type: schema.Types.ObjectId,
       ref:"User",
-   }
+   },
+   isAvailable: {
+        type: Boolean,
+        default: true 
+    },
+    availableFrom: Date,
+    availableTo: Date,
 });
 
 listingSchema.post("findOneAndDelete",async(listing)=>{

@@ -1,0 +1,41 @@
+<div class="chatbot-container">
+    <button
+        class="btn btn-primary shadow-lg rounded-circle p-3 d-flex align-items-center justify-content-center chatbot-toggle-button"
+        type="button"
+        id="chatbot-toggle-btn"
+        aria-expanded="false"
+        aria-controls="chatbotCollapse"
+    >
+        <i class="fas fa-comment-dots fa-2x"></i>
+    </button>
+
+    <div class="collapse" id="chatbotCollapse">
+        <div class="chatbot-card card"> <div class="chatbot-header">
+                <h5>Chat with Us</h5>
+                <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    id="chatbot-close-btn"
+                    aria-label="Close"
+                ></button>
+            </div>
+            <div class="chatbot-body">
+                <div id="chat-messages" class="mb-3">
+                    <div class="message bot-message">
+                        <p>Hello! Welcome to Stazy Hotel. How can I assist you today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="input-group">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="chatbot-input"
+                    placeholder="Type your message..."
+                    aria-label="Type your message"
+                />
+                <button class="btn btn-primary" id="chatbot-send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+</div>
