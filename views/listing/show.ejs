@@ -1,4 +1,9 @@
 <% layout('layouts/boilerplate') %>
+<% if (typeof thankyou !== 'undefined' && thankyou) { %>
+  <div class="alert alert-success text-center mt-3">
+    <%= thankyou %>
+  </div>
+<% } %>
 <div id="filters">
   <div id="filter">
     <i class="fa-solid fa-mountain-sun"></i>
@@ -32,6 +37,11 @@
 </div>
 </div>
   <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 justify-content-center">
+    <% if (alllisting.length === 0) { %>
+      <div class="text-center my-5">
+        <h4>No listings found</h4>
+      </div>
+  <% } else { %>
     <%  for(listing of alllisting){ %>
       <a href="/show/listing/<%= listing._id %>" style="text-decoration: none;">
        <div class="card mx-auto" style="max-width: 20rem;">
@@ -51,5 +61,6 @@
             </div>
           </div>
         </a>
+        <% } %>
   <% } %>
   </div>

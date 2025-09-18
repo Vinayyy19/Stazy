@@ -13,11 +13,12 @@ router.route("/signup")
 
 router.route("/login")
 .get((req, res) => {
-  res.render("../views/listing/login.ejs");
+  res.render("../views/listing/login.ejs", { error: req.flash("error") });
 })
 .post(saveRedirectUrl,
-  passport.authenticate("local", { failureRedirect: "/login",
-  failureFlash:true }),UserController.login);
+  passport.authenticate("local", { failureRedirect: "/login", failureFlash: true }),
+  UserController.login
+);
 
 router.get('/logout', UserController.logOut);
 

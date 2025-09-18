@@ -1,4 +1,9 @@
 <% layout('layouts/boilerplate') %>
+<% if (error && error.length > 0) { %>
+  <div class="alert alert-danger text-center mt-3">
+    <%= error[0] %>
+  </div>
+<% } %>
 <body>
     <div class="new">
     <form method="POST" class="needs-validation" novalidate action="/login">

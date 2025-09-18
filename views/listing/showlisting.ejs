@@ -2,8 +2,8 @@
       <script>
         const mapToken = "<%=process.env.map_acess%>";
         const coordinates = JSON.parse("<%- JSON.stringify(listing.geometry.coordinates) %>");
-
       </script>
+      
         <div class="card col-6 offset-3">
           <img src="<%= listing.image.url %>" class="card-img-top card-img" alt="listing Image">
         </div>
@@ -21,6 +21,11 @@
             <% } %>
             <h5>Location</h5> <%=listing.location %> 
             <h5>country</h5> <%=listing.country %> <br><br>
+            <div class="col-8 offset-2 text-center my-4">
+            <a href="/listing/<%= listing._id %>/book" class="btn btn-primary btn-lg">
+                Book Now
+            </a>
+            </div>
             <% if (CurrUser && CurrUser._id.equals(listing.owner._id)) { %>
             <div class="button">
               <form style="display: inline-block;" method="get"

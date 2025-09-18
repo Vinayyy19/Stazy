@@ -1,0 +1,115 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container col-md-6 mt-4">
+  <h2>Book: <%= listing.title %></h2>
+  <p>Location: <%= listing.location %>, <%= listing.country %></p>
+  <p>Price per night: &#8377;<%= listing.price.toLocaleString('en-IN') %></p>
+
+  <form id="bookingForm" class="needs-validation" novalidate>
+    <div class="mb-3">
+      <label for="checkIn" class="form-label">Check-in Date</label>
+      <input type="date" id="checkIn" name="checkIn" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="checkOut" class="form-label">Check-out Date</label>
+      <input type="date" id="checkOut" name="checkOut" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="guests" class="form-label">Guests</label>
+      <input type="number" id="guests" name="guests" class="form-control" min="1" value="1" required>
+    </div>
+
+    <% if (availability && availability.length > 0) { %>
+      <div class="alert alert-success">
+        Available on your selected dates
+      </div>
+    <% } else if (availability === false) { %>
+      <div class="alert alert-danger">
+        Not available for the selected dates
+      </div>
+    <% } %>
+
+    <button type="submit" class="btn btn-dark d-block mx-auto mt-3">Calculate & Pay</button>
+  </form>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const checkIn = document.getElementById('checkIn').value;
+    const checkOut = document.getElementById('checkOut').value;
+    const guests = document.getElementById('guests').value;
+
+    // Date validation
+    const today = new Date().toISOString().split('T')[0];
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+    if (checkIn < today) {
+      alert("Check-in cannot be before today");
+      return;
+    }
+    if (checkOut < tomorrowStr) {
+      alert("Check-out must be at least 1 day from today");
+      return;
+    }
+    if (checkOut <= checkIn) {
+      alert("Check-out must be after check-in");
+      return;
+    }
+
+    // Create Razorpay order
+    const res = await fetch(`/listing/<%= listing._id %>/book`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ checkIn, checkOut, guests })
+    });
+
+    const data = await res.json(); 
+
+    const options = {
+      key: data.key_id,
+      amount: data.totalPrice * 100, // paise
+      currency: "INR",
+      name: "<%= listing.title %>",
+      description: "Booking Payment",
+      order_id: data.orderId,
+      handler: async function(response) {
+        // Verify payment and create booking
+        const verifyRes = await fetch('/booking/success', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            razorpay_payment_id: response.razorpay_payment_id,
+            razorpay_order_id: response.razorpay_order_id,
+            razorpay_signature: response.razorpay_signature,
+            listingId: "<%= listing._id %>",
+            checkIn, checkOut, guests
+          })
+        });
+
+        const verifyData = await verifyRes.json();
+
+        // ✅ Success / failure alert here
+        if (verifyData.success) {
+          alert(`✅ Booking confirmed!\nReceipt ID: ${verifyData.receipt.bookingId} please save receipt number or payment history for future varification`);
+          window.location.href = `${verifyData.redirectUrl}?thankyou=${encodeURIComponent(verifyData.thankyouMsg)}`;
+        } else {
+          alert(`❌ Payment failed: ${verifyData.message}`);
+        }
+      },
+      prefill: {
+        name: "<%= CurrUser?.username %>",
+        email: "<%= CurrUser?.email %>"
+      },
+      theme: { color: "#ADD8E6" }
+    };
+    const rzp = new Razorpay(options);
+    rzp.open();
+  });
+</script>

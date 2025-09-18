@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const WrapAsync = require("../Extra/WrapAsync");
 const {isLoggedIn,ValidateData} = require("../middleWare.js");
+const booking = require("../controller/listing.js");
 const ListingController = require("../controller/listing.js");
 const storage = require("../cloudconf.js")
 const upload = multer(storage);
@@ -28,6 +29,26 @@ router.get("/new",isLoggedIn,(req,res)=>{
     res.render("listing/new.ejs");
   });
   
+ // search Route
+ router.get('/search', ListingController.searchListings);
+
+ // book route
+ router.get("/listing/:id/book",
+  isLoggedIn,
+  WrapAsync(booking.renderBookingPage)
+);
+
+router.post(
+  "/listing/:id/book",
+  isLoggedIn,
+  WrapAsync(ListingController.createPayment)  
+);
+
+router.post(
+  "/booking/success",
+  isLoggedIn,
+  WrapAsync(ListingController.verifyPayment)
+);
   // Home Route
   router.get("/", WrapAsync (ListingController.HomeRoute));
 
